@@ -12,9 +12,9 @@ const PostList = (props) => {
   return (
     <List {...props}>
       <Datagrid>
-        <TextField source="Id" />
-        <TextField source="Title" />
-        <DateField source="Published At" />
+        <TextField source="id" />
+        <TextField source="title" />
+        <DateField source="publishedAt" />
         <EditButton basePath="/posts" />
         <DeleteButton basePath="/posts" />
       </Datagrid>
