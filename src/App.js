@@ -1,14 +1,28 @@
-import React from 'react'
+import React from "react";
 import { Admin, Resource } from "react-admin";
 import restProvider from "ra-data-simple-rest";
-import PostList from "./components/PostList";
-import PostCreate from "./components/PostCreate";
-import PostEdit from "./components/PostEdit";
+import PostList from "./components/post/PostList";
+import PostCreate from "./components/post/PostCreate";
+import PostEdit from "./components/post/PostEdit";
+import UserList from "./components/user/UserList";
+import UserEdit from "./components/user/UserEdit";
+import UserCreate from "./components/user/UserCreate";
 
 function App() {
   return (
     <Admin dataProvider={restProvider("http://localhost:3000")}>
-      <Resource name="posts" list={PostList} create={PostCreate} edit={PostEdit}/>
+      <Resource
+        name="posts"
+        list={PostList}
+        create={PostCreate}
+        edit={PostEdit}
+      />
+      <Resource
+        name="users"
+        list={UserList}
+        create={UserCreate}
+        edit={UserEdit}
+      />
     </Admin>
   );
 }
