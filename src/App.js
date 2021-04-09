@@ -3,6 +3,8 @@ import UserIcon from '@material-ui/icons/Group';
 import jsonServerProvider from 'ra-data-json-server';
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
+import Dashboard from './components/App';
+import Authentication from './components/Login';
 //Post
 import CreatePost from './components/Post/CreatePost';
 import EditPost from './components/Post/EditPost';
@@ -15,7 +17,11 @@ import ListUsers from './components/User/ListUsers';
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 function App() {
     return (
-        <Admin dataProvider={dataProvider}>
+        <Admin
+            dashboard={Dashboard}
+            authProvider={Authentication}
+            dataProvider={dataProvider}
+        >
             <Resource
                 name="users"
                 list={ListUsers}
