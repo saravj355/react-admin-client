@@ -1,3 +1,5 @@
+import PostIcon from '@material-ui/icons/Book';
+import UserIcon from '@material-ui/icons/Group';
 import jsonServerProvider from 'ra-data-json-server';
 import React from 'react';
 import { Admin, Resource } from 'react-admin';
@@ -19,12 +21,14 @@ function App() {
                 list={ListUsers}
                 create={CreateUser}
                 edit={EditUser}
+                icon={UserIcon}
             />
             <Resource
                 name="posts"
                 list={ListPosts}
                 create={CreatePost}
                 edit={EditPost}
+                icon={PostIcon}
             />
         </Admin>
     );
