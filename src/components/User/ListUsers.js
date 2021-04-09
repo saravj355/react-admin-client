@@ -9,10 +9,10 @@ import {
 } from 'react-admin';
 import MyUrlField from '../other/MyUrlField';
 
-const UserList = (props) => {
+const ListUsers = (props) => {
     return (
         <List {...props}>
-            <Datagrid rowClick="edit">
+            <Datagrid>
                 <TextField source="id" />
                 <TextField source="name" />
                 <EmailField source="email" />
@@ -26,4 +26,4 @@ const UserList = (props) => {
     );
 };
 
-export default UserList;
+export default ListUsers;
