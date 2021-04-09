@@ -1,20 +1,22 @@
 import React from 'react';
 import {
     Datagrid,
-    DateField,
     DeleteButton,
     EditButton,
     List,
+    ReferenceField,
     TextField,
 } from 'react-admin';
 
-const PostList = (props) => {
+const ListPosts = (props) => {
     return (
         <List {...props}>
             <Datagrid>
                 <TextField source="id" />
+                <ReferenceField source="userId" reference="users">
+                    <TextField source="name" />
+                </ReferenceField>
                 <TextField source="title" />
-                <DateField source="publishedAt" />
                 <EditButton basePath="/posts" />
                 <DeleteButton basePath="/posts" />
             </Datagrid>
@@ -22,4 +24,4 @@ const PostList = (props) => {
     );
 };
 
-export default PostList;
+export default ListPosts;
