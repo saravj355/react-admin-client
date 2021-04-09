@@ -7,10 +7,11 @@ import {
     ReferenceField,
     TextField,
 } from 'react-admin';
+import PostFilter from './PostFilter';
 
 const ListPosts = (props) => {
     return (
-        <List {...props}>
+        <List filters={<PostFilter />} {...props}>
             <Datagrid>
                 <TextField source="id" />
                 <ReferenceField source="userId" reference="users">
