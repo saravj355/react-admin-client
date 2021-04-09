@@ -8,6 +8,9 @@ const EditUser = (props) => {
                 <TextInput disabled source="id" />
                 <TextInput source="name" />
                 <TextInput source="email" />
+                <TextInput source="phone" />
+                <TextInput source="website" />
+                <TextInput source="company.name" />
             </SimpleForm>
         </Edit>
     );
